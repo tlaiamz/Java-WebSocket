@@ -54,7 +54,7 @@ public class SSLServerExample {
 
     KeyStore ks = KeyStore.getInstance(STORETYPE);
     File kf = new File(KEYSTORE);
-    // ks.load(new FileInputStream(kf), STOREPASSWORD.toCharArray());
+    ks.load(new FileInputStream(kf), STOREPASSWORD.toCharArray());
 
     KeyManagerFactory kmf = KeyManagerFactory.getInstance("SunX509");
     kmf.init(ks, KEYPASSWORD.toCharArray());
